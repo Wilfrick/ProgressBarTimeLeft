@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 from typing import Optional
-from .night_mode import isnightmode
+from .nightmode import isnightmode
 
 from anki.hooks import addHook, wrap
 from anki import version as anki_version
@@ -79,13 +79,13 @@ if isnightmode():
     qtxt = "aliceblue"  # Percentage color, if text visible.
     qbg = "rgba(39, 40, 40, 1)"  # Background color of progress bar.
     qfg = "#3399cc"  # Foreground color of progress bar.
-    qbr = 0  # Border radius (> 0 for rounded corners).
+    qbr = 5#0  # Border radius (> 0 for rounded corners).
     qtr = 0  # Border radius (> 0 for rounded corners).
 else:
     qtxt = "black"  # Percentage color, if text visible.
-    qbg = "rgba(228, 228, 228, 1)"  # Background color of progress bar.
-    qfg = "#3399cc"  # Foreground color of progress bar.
-    qbr = 0  # Border radius (> 0 for rounded corners).
+    qbg = "rgba(40, 40, 40, 0)"#"rgba(228, 228, 228, 1)"  # Background color of progress bar.
+    qfg = "#cccccc"#"#3399cc"  # Foreground color of progress bar.
+    qbr = 5#0  # Border radius (> 0 for rounded corners).
     qtr = 0  # Border radius (> 0 for rounded corners).
 
 # optionally restricts progress bar width
